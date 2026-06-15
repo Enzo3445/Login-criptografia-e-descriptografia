@@ -1,7 +1,7 @@
 ﻿# Login-criptografia-e-descriptografia
 # Sistema de criptografia e descriptografia de usuarios
 
-sobre o projeto
+Sobre o projeto
 
 Este projeto foi desenvolvido para aumentar a segurança das informações como a senha dos usuarios, email e o seu usuario.
 Aplicação permite cadastrar usuarios de forma segura, criptografando seus dados e os salvando em um banco de dados.
