@@ -1,12 +1,12 @@
 ﻿# Login-criptografia-e-descriptografia
 # Sistema de criptografia e descriptografia de usuarios
 
-##Sobre o projeto
+sobre o projeto
 
 Este projeto foi desenvolvido para aumentar a segurança das informações como a senha dos usuarios, email e o seu usuario.
 Aplicação permite cadastrar usuarios de forma segura, criptografando seus dados e os salvando em um banco de dados.
 
-##Funcionalidade
+Funcionalidade
 -  Cadastro de usuários
 -  Criptografia automática dos dados
 -  Descriptografia segura dos dados
@@ -14,12 +14,12 @@ Aplicação permite cadastrar usuarios de forma segura, criptografando seus dado
 -  Geração e utilização de chave de criptografia
 -  Consulta de usuários cadastrados
 
-## Tecnologias ultilizadas
+ Tecnologias ultilizadas
 --Python 3 
 - SQLite3
 - Cryptography (fernet)
 
-## 📂 Estrutura do Projeto
+ 📂 Estrutura do Projeto
 
 ```
  Projeto
