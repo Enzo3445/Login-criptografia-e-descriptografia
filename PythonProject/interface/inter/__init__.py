@@ -35,7 +35,7 @@ class Janela(QWidget):
 
         self.input_chave =   QLineEdit()
         self.input_chave.setPlaceholderText("digite chave")
-
+        #Interface mais questionario ao usuario
 
 
 
@@ -57,7 +57,7 @@ class Janela(QWidget):
         self.setLayout(layout)
 
     def criar_conta(self):
-        print ("1")
+        
         nome = self.input_nome.text()
 
         email = self.input_email.text()
@@ -65,18 +65,19 @@ class Janela(QWidget):
         password = self.input_password.text()
         if detectador_de_senhafraca(password):
             print("senha fraca")
+            
         else:
             chave = self.input_chave.text()
 
-            print ("2")
+            
             if not nome or not email or not password:
                 print("preencha todos os campos")
                 return
-            print ("3")
+            
             self.conn = sqlite3.connect('DataBase3')
             self.cursor = self.conn.cursor()
 
-            print ("4")
+            
 
             self.cursor.execute("""create table if not exists dados (
              id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -84,7 +85,7 @@ class Janela(QWidget):
              email TEXT,
              password TEXT)""")
             self.conn.commit()
-            print ("5")
+            
 
             try:
 
@@ -104,6 +105,8 @@ class Janela(QWidget):
             except Exception as erro:
                 print(erro)
 
+        #Criando conta e criptografia no banco de daods
+
 
 
 
@@ -112,26 +115,25 @@ class Janela(QWidget):
 
 
             print("Conta criada!")
-            print("3")
+            
             self.cursor.execute("SELECT * FROM dados")
             # Limpa inputs
             self.input_nome.clear()
             self.input_email.clear()
             self.input_password.clear()
             self.input_chave.clear()
-            print("4")
+            #limpando os input apos o usuario clicar no butão
+            
 
             dados  = self.cursor.fetchall()
             for linha in dados:
                 print(linha)
-                print("4")
+                
 
             return chave
 
 
 
-    def clicar(self):
-        self.texto.setText("Você clicou!")
 
 
 
