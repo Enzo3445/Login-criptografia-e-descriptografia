@@ -32,12 +32,14 @@ class TelaAdmin(QMainWindow):
         widget.setLayout(layout)
 
         self.setCentralWidget(widget)
+        #criação da interface
 
         self.carregar_dados()
 
     def carregar_dados(self):
         conn = sqlite3.connect("DataBase3")
         cursor = conn.cursor()
+        #conexao com o banco de dados e selecionando seus oq contem nele
 
         cursor.execute("""
             SELECT id, nome, email, password
@@ -61,7 +63,7 @@ class TelaAdmin(QMainWindow):
             nome = descriptografa_texto(usuario[1])
             email = descriptografa_texto(usuario[2])
             senha = descriptografa_texto(usuario[3])
-
+            #descriptografia do usuario
             print(id_usuario, nome, email, senha)
 
             self.tabela.setItem(linha, 0, QTableWidgetItem(str(id_usuario)))
